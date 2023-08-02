@@ -2,6 +2,7 @@ import time
 import pyautogui
 import keyboard
 import threading
+from tkinter import *
 
 pyautogui.hotkey('alt', 'tab')
 
