@@ -51,17 +51,20 @@ if __name__ == "__main__":
     keyboard.on_press_key("esc", on_esc_press)
 
     for z in range(0, 100):
-        if find_image_on_screen(image_path, confidence=0.9):
+        if stop_flag == False:
+            if find_image_on_screen(image_path, confidence=0.9):
             # Image found, move the mouse to it
-            if move_mouse_to_image(image_path, confidence=0.9):
-                time.sleep(1)
-                pyautogui.press('l')
-                pyautogui.click()  # Click at the current mouse position
-                time.sleep(1)
+                if move_mouse_to_image(image_path, confidence=0.9):
+                    time.sleep(1)
+                    pyautogui.press('l')
+                    pyautogui.click()  # Click at the current mouse position
+                    time.sleep(1)
 
-        time.sleep(1)
-        pyautogui.press('right')
-        time.sleep(1)
+            time.sleep(1)
+            pyautogui.press('right')
+            time.sleep(1)
+        else:
+            time.sleep(1)
 
     # Unregister the "Esc" key press callback
     keyboard.unhook_all()
