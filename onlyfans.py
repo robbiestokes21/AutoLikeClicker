@@ -33,22 +33,24 @@ def move_mouse_to_image(image_path, confidence=0.9):
 def on_esc_press(event):
     global stop_flag
     if event.name == "esc":
-        stop_flag = True
-        print("Script stopped by user.")
+        if stop_flag:
+            stop_flag = False
+            print("Script resumed by user.")
+        else:
+            stop_flag = True
+            print("Script paused by user.")
+    time.sleep(0.0001)
 
 stop_flag = False
 
 if __name__ == "__main__":
     # Replace 'newlikeButton.png' with the actual path to the image you want to find
-    image_path = "path/to/image/newlikeButton.png"
+    image_path = "D:/pyScripts/Onlyfans/newlikeButton.png"
 
     # Register the callback for the "Esc" key press
     keyboard.on_press_key("esc", on_esc_press)
 
     for z in range(0, 100):
-        if stop_flag:
-            break
-
         if find_image_on_screen(image_path, confidence=0.9):
             # Image found, move the mouse to it
             if move_mouse_to_image(image_path, confidence=0.9):
