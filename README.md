@@ -13,13 +13,18 @@ for now I only have the image for facebook
 2. Now install OpenCV, pyautogui, keyboard
 ```
 pip install opencv-python
+```
+```
 pip install pyautogui
+```
+```
 pip install keyborad
-
 ```
 3. Now you can run the program in Visual studio Code
 To run it in the terminal
 ```
 cd path/to/AutoLikeClicker
+```
+```
 py autoclick.py
 ```
