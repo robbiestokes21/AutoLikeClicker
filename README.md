@@ -10,7 +10,7 @@ for now I only have the image for facebook
 
 # Installation Instructions
 1. Clone this repo, [download](https://github.com/robbiestokes21/AutoLikeClicker/archive/refs/heads/main.zip) the zip or open in Visual Studio Code
-2. Now install OpenCV, pyautogui, keyboard
+2. Now install OpenCV, pyautogui, keyboard, tk
 ```
 pip install opencv-python
 ```
@@ -19,6 +19,9 @@ pip install pyautogui
 ```
 ```
 pip install keyborad
+```
+```
+pip install tk
 ```
 3. Now you can run the program in Visual studio Code
 To run it in the terminal
